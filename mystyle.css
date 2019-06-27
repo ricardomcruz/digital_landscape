@@ -1,0 +1,38 @@
+
+html, body{
+    margin: 0;
+    
+}
+
+body{
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 100vh;
+}
+
+.container{
+    margin:auto;
+    display:block;
+    width: 50%;
+    height: 50%;
+    border: 5px solid rgb(157, 255, 0);
+    transform: translateY(25vh);
+    border-radius:50px;
+
+}
+
+.hours{
+    height: 50%;
+    text-align: center;
+    margin:auto;
+    font-size: 5vw;
+}
+
+.time{
+    background-color: hsl(197, 71%, 73%)
+    height: 100vh;
+    color: yellow;
+}
+
+
+
