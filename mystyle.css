@@ -8,7 +8,14 @@ body{
     background-repeat: no-repeat;
     background-size: auto;
     height: 100vh;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
 }
+    
+
+
+
 
 .container{
     margin:auto;
@@ -17,9 +24,11 @@ body{
     height: 50%;
     border: 5px solid rgb(157, 255, 0);
     transform: translateY(25vh);
-    border-radius:50px;
+    border-radius: 50px;
 
 }
+
+
 
 .hours{
     height: 50%;
@@ -29,7 +38,6 @@ body{
 }
 
 .time{
-    background-color: hsl(197, 71%, 73%)
     height: 100vh;
     color: yellow;
 }

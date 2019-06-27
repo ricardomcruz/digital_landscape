@@ -68,7 +68,7 @@ var L = timePath(currentTime, startSun, midSun, endSun);
 //document.body.style.backgroundColor = "hsl(197, 71%, " + L+"%)";
 
 
-document.body.style.backgroundImage = "linear-gradient(to bottom, hsl(197, 71%, " + L+"%), hsl(197, 71%, " + L+"%))";
+document.body.style.backgroundImage = "linear-gradient(to top, hsl(197, 71%, " + L+"%), hsl(197, 71%, " + (L+5)+"%))";
 
 
 
@@ -93,28 +93,21 @@ document.body.style.backgroundImage = "linear-gradient(to bottom, hsl(197, 71%, 
 
 // Get information about location
 
-/*
-if (navigator.geolocation){
-  navigator.geolocation.getCurrentPosition(function(position) {
-    document.getElementById('data').innerHTML="latitude: "+ position.coords.latitude + "<br>longitude: " + position.coords.longitude;
-  });
-  
-}
 
+var requestUrl = "http://ip-api.com/json";
 
-
-function showPosition(position) {
-  var user_position = {};
-  user_position.lat = position.coords.latitude; 
-  user_position.lng = position.coords.longitude; 
-  return user_position;
-}
-
-var userPosition = showPosition(position);
-
-
-*/
-
+$.ajax({
+  url: requestUrl,
+  type: 'GET',
+  success: function(json)
+  {
+    console.log("My country is: " + json.country);
+  },
+  error: function(err)
+  {
+    console.log("Request failed, error= " + err);
+  }
+});
 
 
 // Get information about sunrise and sunset
